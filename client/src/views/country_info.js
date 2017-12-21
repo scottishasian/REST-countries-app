@@ -3,7 +3,15 @@ const CountryInfo = function () {
 }
 
 CountryInfo.prototype.render = function (country) {
-  // TODO: Render country info
+  const ul = document.querySelector('#country-info');
+  const li = document.createElement('li');
+  const img = document.createElement("img")
+  li.innerText = "Name: " + country.name
+  img.src = country.flag;
+  ul.innerHTML = "";
+  ul.appendChild(li);
+  ul.appendChild(img);
+
 }
 
 CountryInfo.prototype.createListItem = function (label, content) {
