@@ -148,10 +148,11 @@ const CountryInfo = function () {
 }
 
 CountryInfo.prototype.render = function (country) {
+
   const ul = document.querySelector('#country-info');
   const li = document.createElement('li');
   const img = document.createElement("img")
-  li.innerText = "Name: " + country.name
+  li.innerText = "Name: " + country.name;
   img.src = country.flag;
   ul.innerHTML = "";
   ul.appendChild(li);
