@@ -3,7 +3,10 @@ const CountryInfo = function () {
 }
 
 CountryInfo.prototype.render = function (country) {
-  // TODO: Render country info
+  console.log(country);
+  const li = document.createElement('li');
+  li.innerText = `Name: ${country.name}`;
+  this.ul.appendChild(li);
 }
 
 CountryInfo.prototype.createListItem = function (label, content) {
